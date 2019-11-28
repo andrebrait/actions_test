@@ -10,10 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo "${GITHUB_ACTION}"
+      run: echo "${{ env.GITHUB_ACTION }}"
     - name: Run a multi-line script
       run: |
-        echo "${GITHUB_ACTION}"
-        echo "${GITHUB_REF}"
-        echo "${GITHUB_BASE_REF}"
-        echo "${GITHUB_HEAD_REF}"
+        echo "${{ env.GITHUB_ACTION }}"
+        echo "${{ env.GITHUB_REF }}"
+        echo "${{ env.GITHUB_BASE_REF }}"
+        echo "${{ env.GITHUB_HEAD_REF }}"
