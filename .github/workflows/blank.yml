@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo ${GITHUB_ACTION}
+      run: echo "$(env)"
     - name: Run a multi-line script
       run: |
         echo ${GITHUB_ACTION}
