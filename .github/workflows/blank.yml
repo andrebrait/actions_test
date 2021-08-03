@@ -12,9 +12,14 @@ jobs:
     - name: Run a one-line script
       run: env
     - name: Run a multi-line script
+      shell: bash
       run: |
-        echo ${GITHUB_ACTION}
-        echo ${GITHUB_ACTIONS}
-        echo ${GITHUB_REF}
-        echo ${GITHUB_BASE_REF}
-        echo ${GITHUB_HEAD_REF}
+        echo "${GITHUB_ACTION}"
+        echo "${GITHUB_ACTIONS}"
+        echo "${GITHUB_REF}"
+        echo "${GITHUB_BASE_REF}"
+        echo "${GITHUB_HEAD_REF}"
+        echo ~
+        echo "$HOME"
+        echo "tilde" && ls ~
+        echo "home" && ls "HOME"
