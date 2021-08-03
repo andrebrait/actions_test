@@ -22,4 +22,4 @@ jobs:
         echo ~
         echo "$HOME"
         echo "tilde" && ls ~
-        echo "home" && ls "HOME"
+        echo "home" && ls "$HOME"
